@@ -1,0 +1,141 @@
+
+}
+.moreButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;}
+
+span > .text {
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: 300;}
+
+
+.the-arrow {
+    width: 20px;
+   
+    transition: all 0.2s;
+}
+.the-arrow.-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.the-arrow.-left > .shaft {
+    width: 0;
+    height: 2px;
+    background-color: #F6BB43;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+    width: 0;
+    background-color: #F6BB43;
+    height: 2px;
+}
+
+
+.the-arrow.-right {
+    top: 50%;
+    padding-left: 20px;
+}
+.the-arrow.-right > .shaft {
+    width: 2px;
+    transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+    width: 16px;
+    transition-delay: 0.3s;
+    transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+    transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+    transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+    background-color: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.2s;
+    transition-delay: 0;
+    will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+    background-color: black;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.2s;
+    transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+    transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+    transform-origin: bottom right;
+}
+.animated-arrow {
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s;
+}
+.animated-arrow:hover {
+    color: black;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+    width: 48px;
+    transition-delay: 0.1s;
+    background-color: #F6BB43;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+    width: 20px;
+    transition-delay: 0.1s;
+    background-color: #F6BB43;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+    transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+    transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  
+    transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+    width: 0;
+    transform: translateX(200%);
+    transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+    width: 0;
+    transition-delay: 0;
+    transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+    transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+    transform: rotate(0);
+}
+.animated-arrow > .main {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+    margin: 0 16px 0 0;
+    line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+    position: relative;
+}
